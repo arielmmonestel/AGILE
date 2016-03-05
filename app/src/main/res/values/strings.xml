@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AGILE</string>
+    <string name="title_activity_game">game</string>
 </resources>
