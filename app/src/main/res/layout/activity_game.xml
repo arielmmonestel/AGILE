@@ -253,7 +253,8 @@
             android:id="@+id/button18"
             android:layout_toEndOf="@+id/button17"
             android:layout_below="@+id/button13"
-            android:layout_margin="1dp" />
+            android:layout_margin="1dp"
+            android:background="@drawable/btn_circle_default" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="61dp"
