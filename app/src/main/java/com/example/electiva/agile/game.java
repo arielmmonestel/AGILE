@@ -15,10 +15,13 @@ import java.util.concurrent.TimeUnit;
 
 @TargetApi(Build.VERSION_CODES.GINGERBREAD)
 @SuppressLint("NewApi")
+
 public class game extends AppCompatActivity {
 
     TextView tiempo;
+
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
@@ -29,6 +32,7 @@ public class game extends AppCompatActivity {
     }
 
     @TargetApi(Build.VERSION_CODES.GINGERBREAD)
+
     @SuppressLint("NewApi")
 
     public class CounterClass extends CountDownTimer{
