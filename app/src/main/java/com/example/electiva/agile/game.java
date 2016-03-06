@@ -59,8 +59,11 @@ public class game extends AppCompatActivity {
     public void colocarNumero(View v){
         Button idButton = (Button)v;
         pop.start();
-        CharSequence letraDelBoton = idButton.getText();
+        String letraDelBoton = idButton.getText().toString();
         TextView operacion = (TextView) findViewById(R.id.operacion);
+        if(letraDelBoton.equals("=")){
+            idButton.setBackground(getDrawable(R.drawable.btn_circle_anaranjado));
+        }else if(!letraDelBoton.equals("=")){idButton.setBackground(getDrawable(R.drawable.btn_rectangle_azul));}
         String letrasQueTenia = operacion.getText().toString();
         operacion.setText(letrasQueTenia+letraDelBoton);
     }
