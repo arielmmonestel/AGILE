@@ -59,9 +59,10 @@
         android:layout_width="280dp"
         android:layout_height="match_parent"
         android:layout_below="@+id/operacion"
-        android:layout_centerInParent="true"
         android:id="@+id/botonesjuego"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
 
 
         <Button
@@ -84,6 +85,7 @@
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/button1"
             android:layout_margin="1dp" />
+
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="55dp"
