@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Button jugar = (Button) findViewById(R.id.jugarbutton);
         Button ayuda = (Button) findViewById(R.id.ayudabutton);
 
-        reproductor=MediaPlayer.create(this,R.raw.fondo);
+        reproductor = MediaPlayer.create(this,R.raw.fondo);
         reproductor.setLooping(true);
         reproductor.start();
 

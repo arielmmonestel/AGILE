@@ -2,7 +2,7 @@ package com.example.electiva.agile;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -20,14 +20,16 @@ import java.util.concurrent.TimeUnit;
 public class game extends AppCompatActivity {
 
     TextView tiempo;
+    private MediaPlayer pop;
 
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-    tiempo = (TextView)findViewById(R.id.tiempo);
-    tiempo.setText("00:03:00");
+        pop = MediaPlayer.create(this,R.raw.pop);
+        tiempo = (TextView)findViewById(R.id.tiempo);
+        tiempo.setText("00:03:00");
         final CounterClass timer = new CounterClass(180000,1000);
         timer.start();
     }
@@ -56,16 +58,8 @@ public class game extends AppCompatActivity {
 
     public void colocarNumero(View v){
         Button idButton = (Button)v;
-        String letraDelBoton = idButton.getText().toString();
-
-        ////Aqui cambiamos los colores de los botones cuando se le hace click
-        if (letraDelBoton.equals("=")){
-            idButton.setBackground(getDrawable(R.drawable.btn_circle_anaranjado));
-        }else if(!letraDelBoton.equals("=")){
-            idButton.setBackground(getDrawable(R.drawable.btn_rectangle_azul));
-
-        }
-
+        pop.start();
+        CharSequence letraDelBoton = idButton.getText();
         TextView operacion = (TextView) findViewById(R.id.operacion);
         String letrasQueTenia = operacion.getText().toString();
         operacion.setText(letrasQueTenia+letraDelBoton);
