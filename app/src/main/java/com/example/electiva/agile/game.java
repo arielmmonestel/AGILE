@@ -2,6 +2,7 @@ package com.example.electiva.agile;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -55,7 +56,15 @@ public class game extends AppCompatActivity {
 
     public void colocarNumero(View v){
         Button idButton = (Button)v;
-        CharSequence letraDelBoton = idButton.getText();
+        String letraDelBoton = idButton.getText().toString();
+
+        ////Aqui cambiamos los colores de los botones cuando se le hace click
+        if (letraDelBoton.equals("=")){
+            idButton.setBackground(getDrawable(R.drawable.btn_circle_anaranjado));
+        }else if(!letraDelBoton.equals("=")){
+            idButton.setBackground(getDrawable(R.drawable.btn_rectangle_azul));
+
+        }
 
         TextView operacion = (TextView) findViewById(R.id.operacion);
         String letrasQueTenia = operacion.getText().toString();
