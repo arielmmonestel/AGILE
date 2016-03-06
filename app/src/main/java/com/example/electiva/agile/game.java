@@ -2,6 +2,8 @@ package com.example.electiva.agile;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -19,14 +21,17 @@ import java.util.concurrent.TimeUnit;
 public class game extends AppCompatActivity {
 
     TextView tiempo;
+    private MediaPlayer pop;
 
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-    tiempo = (TextView)findViewById(R.id.tiempo);
-    tiempo.setText("00:03:00");
+        pop = MediaPlayer.create(game.this, R.raw.pop);
+        tiempo = (TextView)findViewById(R.id.tiempo);
+        tiempo.setText("00:03:00");
         final CounterClass timer = new CounterClass(180000,1000);
         timer.start();
     }
@@ -35,10 +40,13 @@ public class game extends AppCompatActivity {
 
     @SuppressLint("NewApi")
 
+
+
     public class CounterClass extends CountDownTimer{
         public CounterClass(long millisInfuture, long countDownInterval){
             super(millisInfuture,countDownInterval);
         }
+
         public  void onTick(long millisUntilFinished){
             long millis = millisUntilFinished;
             String hms = String.format("%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millis),
@@ -50,15 +58,16 @@ public class game extends AppCompatActivity {
         public void onFinish(){
         tiempo.setText("00:00:00");
         }
-
     }
+
 
     public void colocarNumero(View v){
+        pop.start();
         Button idButton = (Button)v;
         CharSequence letraDelBoton = idButton.getText();
-
         TextView operacion = (TextView) findViewById(R.id.operacion);
         String letrasQueTenia = operacion.getText().toString();
-        operacion.setText(letrasQueTenia+letraDelBoton);
+        operacion.setText(letrasQueTenia + letraDelBoton);
     }
+
 }
