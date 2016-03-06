@@ -6,6 +6,8 @@ import android.os.Build;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.sql.Time;
@@ -28,6 +30,7 @@ public class game extends AppCompatActivity {
 
     @TargetApi(Build.VERSION_CODES.GINGERBREAD)
     @SuppressLint("NewApi")
+
     public class CounterClass extends CountDownTimer{
         public CounterClass(long millisInfuture, long countDownInterval){
             super(millisInfuture,countDownInterval);
@@ -37,12 +40,21 @@ public class game extends AppCompatActivity {
             String hms = String.format("%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millis),
                     TimeUnit.MILLISECONDS.toMinutes(millis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)),
                     TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
-            System.out.println(hms);
+
             tiempo.setText(hms);
         }
         public void onFinish(){
         tiempo.setText("00:00:00");
         }
 
+    }
+
+    public void colocarNumero(View v){
+        Button idButton = (Button)v;
+        CharSequence letraDelBoton = idButton.getText();
+
+        TextView operacion = (TextView) findViewById(R.id.operacion);
+        String letrasQueTenia = operacion.getText().toString();
+        operacion.setText(letrasQueTenia+letraDelBoton);
     }
 }
