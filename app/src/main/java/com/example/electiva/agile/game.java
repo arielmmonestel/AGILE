@@ -21,6 +21,7 @@ public class game extends AppCompatActivity {
 
     TextView tiempo;
     private MediaPlayer pop;
+    private MediaPlayer song;
 
     @Override
 
@@ -28,6 +29,9 @@ public class game extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         pop = MediaPlayer.create(this,R.raw.pop);
+        song = MediaPlayer.create(this,R.raw.song);
+        song.setVolume(20,20);
+        song.start();
         tiempo = (TextView)findViewById(R.id.tiempo);
         tiempo.setText("00:03:00");
         final CounterClass timer = new CounterClass(180000,1000);
@@ -54,6 +58,27 @@ public class game extends AppCompatActivity {
         tiempo.setText("00:00:00");
         }
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (song.isPlaying()){
+            song.stop();
+            song.release();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        song.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        song.pause();
     }
 
     public void colocarNumero(View v){
