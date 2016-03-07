@@ -2,6 +2,7 @@ package com.example.electiva.agile;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 opcion = MediaPlayer.create(MainActivity.this, R.raw.opcion);
                 opcion.start();
+                //Enviamos el programa a una direccion web
+
+                String url = "https://docs.google.com/document/d/1DPUn_RA08ynQx5lqpod7afcivpOAeBaWCNKg9Mpmqp0/edit?usp=sharing";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
             }
         });
 

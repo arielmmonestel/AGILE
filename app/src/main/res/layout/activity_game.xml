@@ -80,7 +80,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
@@ -138,13 +139,14 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="6"
+            android:text="+"
             android:id="@+id/button6"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/button1"
@@ -167,14 +169,15 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="8"
+            android:text="*"
             android:id="@+id/button8"
             android:layout_toEndOf="@+id/button7"
             android:layout_below="@+id/button3"
@@ -188,7 +191,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="9"
+            android:text="12"
             android:id="@+id/button9"
             android:layout_toEndOf="@+id/button8"
             android:layout_below="@+id/button4"
@@ -210,7 +213,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
 
         <Button
@@ -226,7 +230,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -256,13 +261,14 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="5"
+            android:text="9"
             android:id="@+id/button14"
             android:layout_toEndOf="@+id/button13"
             android:layout_below="@+id/button8"
@@ -276,7 +282,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="6"
+            android:text="-"
             android:id="@+id/button15"
             android:layout_toEndOf="@+id/button14"
             android:layout_below="@+id/button10"
@@ -291,7 +297,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="1"
+            android:text="7"
             android:id="@+id/button16"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/button11"
@@ -306,7 +312,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="2"
+            android:text="5"
             android:id="@+id/button17"
             android:layout_toEndOf="@+id/button16"
             android:layout_below="@+id/button12"
@@ -335,7 +341,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="4"
+            android:text="2"
             android:id="@+id/button19"
             android:layout_toEndOf="@+id/button18"
             android:layout_below="@+id/button14"
@@ -349,7 +355,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="5"
+            android:text="7"
             android:id="@+id/button20"
             android:layout_toEndOf="@+id/button19"
             android:layout_below="@+id/button15"
@@ -365,7 +371,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="2"
+            android:text="*"
             android:id="@+id/button21"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/button16"
@@ -388,7 +394,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -417,7 +424,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
@@ -431,7 +439,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
 
         <Button
@@ -447,14 +456,15 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="3"
+            android:text="2"
             android:id="@+id/button27"
             android:layout_toEndOf="@+id/button26"
             android:layout_below="@+id/button22"
@@ -477,7 +487,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
@@ -497,7 +508,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="6"
+            android:text="*"
             android:id="@+id/button30"
             android:layout_toEndOf="@+id/button29"
             android:layout_below="@+id/button25"
@@ -520,14 +531,15 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="7"
+            android:text="14"
             android:id="@+id/button32"
             android:layout_toEndOf="@+id/button31"
             android:layout_below="@+id/button27"
@@ -550,13 +562,14 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="colocarNumero"
-            android:text="32"
+            android:text="20"
             android:id="@+id/button34"
             android:layout_toEndOf="@+id/button33"
             android:layout_below="@+id/button28"
@@ -578,7 +591,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
 
     </RelativeLayout>
