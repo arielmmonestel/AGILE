@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
 import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
@@ -22,6 +23,7 @@ public class game extends AppCompatActivity {
     TextView tiempo;
     private MediaPlayer pop;
     private MediaPlayer song;
+    public static int botonesApretados= 0;
 
     @Override
 
@@ -30,8 +32,12 @@ public class game extends AppCompatActivity {
         setContentView(R.layout.activity_game);
         pop = MediaPlayer.create(this,R.raw.pop);
         song = MediaPlayer.create(this,R.raw.song);
-        song.setVolume(20,20);
-        song.start();
+        song.setVolume(20, 20);
+        System.out.println(MainActivity.sonidoOnOff);
+        if (MainActivity.sonidoOnOff=true){
+            song.start();
+        }
+
         tiempo = (TextView)findViewById(R.id.tiempo);
         tiempo.setText("00:03:00");
         final CounterClass timer = new CounterClass(180000,1000);
@@ -81,15 +87,27 @@ public class game extends AppCompatActivity {
         song.pause();
     }
 
-    public void colocarNumero(View v){
-        Button idButton = (Button)v;
+    public void colocarNumero(View v) {
+        botonesApretados = botonesApretados + 1;
+        if (MainActivity.sonidoOnOff){
         pop.start();
+        }
+        Button idButton = (Button) v;
         String letraDelBoton = idButton.getText().toString();
         TextView operacion = (TextView) findViewById(R.id.operacion);
-        if(letraDelBoton.equals("=")){
-            idButton.setBackground(getDrawable(R.drawable.btn_circle_anaranjado));
-        }else if(!letraDelBoton.equals("=")){idButton.setBackground(getDrawable(R.drawable.btn_rectangle_azul));}
-        String letrasQueTenia = operacion.getText().toString();
-        operacion.setText(letrasQueTenia+letraDelBoton);
+        if (botonesApretados <= 5) {
+
+            if (letraDelBoton.equals("=")) {
+                idButton.setBackground(getDrawable(R.drawable.btn_circle_anaranjado));
+            } else if (!letraDelBoton.equals("=")) {
+                idButton.setBackground(getDrawable(R.drawable.btn_rectangle_azul));
+            }
+            String letrasQueTenia = operacion.getText().toString();
+            operacion.setText(letrasQueTenia + letraDelBoton);
+        }
+        else{
+            botonesApretados=1;
+            operacion.setText(letraDelBoton);
+        }
     }
 }

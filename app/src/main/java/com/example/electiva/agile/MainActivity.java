@@ -12,6 +12,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private MediaPlayer reproductor;
     private MediaPlayer opcion;
+    public static  boolean sonidoOnOff = true;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +27,17 @@ public class MainActivity extends AppCompatActivity {
         reproductor.setLooping(true);
         reproductor.start();
 
+
+
+
+
         jugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(sonidoOnOff){
                 opcion = MediaPlayer.create(MainActivity.this, R.raw.opcion);
                 opcion.start();
+                }
                 startActivity(new Intent(MainActivity.this, game.class));
             }
         });
@@ -37,8 +45,10 @@ public class MainActivity extends AppCompatActivity {
         ayuda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                opcion = MediaPlayer.create(MainActivity.this, R.raw.opcion);
-                opcion.start();
+                if(sonidoOnOff){
+                    opcion = MediaPlayer.create(MainActivity.this, R.raw.opcion);
+                    opcion.start();
+                }
                 //Enviamos el programa a una direccion web
 
                 String url = "https://docs.google.com/document/d/1DPUn_RA08ynQx5lqpod7afcivpOAeBaWCNKg9Mpmqp0/edit?usp=sharing";
@@ -48,6 +58,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+
+
+    public void cambiarSonidoOnOff(View v){
+
+        if (sonidoOnOff){
+            sonidoOnOff =false;
+            reproductor.stop();
+            v.setBackground(getDrawable(R.drawable.sonido_off));
+        }else{
+            sonidoOnOff =true;
+        reproductor = MediaPlayer.create(this,R.raw.fondo);
+            reproductor.setLooping(true);
+            reproductor.start();
+
+            v.setBackground(getDrawable(R.drawable.sonido_on));
+        }
     }
 
     @Override
