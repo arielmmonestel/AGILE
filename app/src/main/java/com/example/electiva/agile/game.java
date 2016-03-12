@@ -31,8 +31,7 @@ public class game extends AppCompatActivity {
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
-        System.out.println("Heeeeeeeey MOOOOOOOOOOOOOOOOOOOM");
-        System.out.println(sonidoOnOffG);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         pop = MediaPlayer.create(this,R.raw.pop);
@@ -40,9 +39,10 @@ public class game extends AppCompatActivity {
         correct = MediaPlayer.create(this,R.raw.correct);
         wrong = MediaPlayer.create(this,R.raw.wrong);
         song.setVolume(20, 20);
-        ;
-        if (sonidoOnOffG){
-            song.start();
+        song.start();
+        if (!MainActivity.sonidoOnOff){
+
+           song.stop();
         }
 
         tiempo = (TextView)findViewById(R.id.tiempo);
@@ -105,7 +105,7 @@ public class game extends AppCompatActivity {
         String letraDelBoton = idButton.getText().toString();
         TextView operacion = (TextView) findViewById(R.id.operacion);
         String letrasQueTenia = operacion.getText().toString();
-        if (sonidoOnOffG){
+        if (MainActivity.sonidoOnOff){
         pop.start();
         }
 
@@ -198,10 +198,14 @@ public class game extends AppCompatActivity {
     public  void animacionOperacion(TextView operacion,boolean correcto){
         if (correcto){
         operacion.setBackground(getDrawable(R.drawable.operacion_correcta));
-            correct.start();
+            if(MainActivity.sonidoOnOff) {
+                correct.start();
+            }
     }else{
             operacion.setBackground(getDrawable(R.drawable.operacion_incorrecta));
-            wrong.start();
+            if(MainActivity.sonidoOnOff) {
+                wrong.start();
+            }
         }
     }
 }
