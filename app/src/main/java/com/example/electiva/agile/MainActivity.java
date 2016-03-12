@@ -26,11 +26,6 @@ public class MainActivity extends AppCompatActivity {
         reproductor = MediaPlayer.create(this,R.raw.fondo);
         reproductor.setLooping(true);
         reproductor.start();
-
-
-
-
-
         jugar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,11 +61,13 @@ public class MainActivity extends AppCompatActivity {
 
         if (sonidoOnOff){
             sonidoOnOff =false;
+            System.out.println(sonidoOnOff );
             reproductor.stop();
             v.setBackground(getDrawable(R.drawable.sonido_off));
         }else{
             sonidoOnOff =true;
-        reproductor = MediaPlayer.create(this,R.raw.fondo);
+            System.out.println(sonidoOnOff );
+            reproductor = MediaPlayer.create(this,R.raw.fondo);
             reproductor.setLooping(true);
             reproductor.start();
 
