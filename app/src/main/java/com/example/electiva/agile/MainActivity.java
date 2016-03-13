@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Button jugar = (Button) findViewById(R.id.jugarbutton);
         Button ayuda = (Button) findViewById(R.id.ayudabutton);
 

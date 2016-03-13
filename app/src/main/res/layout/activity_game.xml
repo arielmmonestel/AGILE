@@ -95,7 +95,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -110,7 +111,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -125,7 +127,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
@@ -154,7 +157,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -185,7 +189,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
@@ -199,7 +204,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
@@ -246,7 +252,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -276,7 +283,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
@@ -290,7 +298,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -305,7 +314,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -320,7 +330,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -349,7 +360,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
@@ -363,7 +375,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
 
         <Button
@@ -379,7 +392,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -410,7 +424,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
@@ -472,7 +487,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -502,7 +518,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
@@ -516,7 +533,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -547,7 +565,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -577,7 +596,8 @@
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp" />
+            android:layout_marginBottom="2dp"
+            android:visibility="invisible" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="48dp"
