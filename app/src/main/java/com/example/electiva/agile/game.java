@@ -52,7 +52,7 @@ public class game extends AppCompatActivity {
         song.start();
         if (!MainActivity.sonidoOnOff){
 
-           song.stop();
+            song.stop();
         }
 
         tiempo = (TextView)findViewById(R.id.tiempo);
@@ -78,7 +78,7 @@ public class game extends AppCompatActivity {
             tiempo.setText(hms);
         }
         public void onFinish(){
-        tiempo.setText("00:00:00");
+            tiempo.setText("00:00:00");
         }
 
     }
@@ -117,7 +117,7 @@ public class game extends AppCompatActivity {
         String letrasQueTenia = operacion.getText().toString();
 
         if (MainActivity.sonidoOnOff){
-        pop.start();
+            pop.start();
         }
         if(!botonYaFueApretado(idButton,botonesApretados)) {
             if (cantBotonesApretados < 5) {
@@ -154,13 +154,23 @@ public class game extends AppCompatActivity {
                 botonesApretados.add(idButton);
             }
         }else{
-            cantBotonesApretados--;
+            cantBotonesApretados = cantBotonesApretados - 2;
+            botonesApretados.remove(botonesApretados.size()-1);
+            idButton.setBackground(getDrawable(R.drawable.btn_rectangle_default));
+            int tamanioTextoDeBoton = letraDelBoton.length();
+            int tamanioTextoQueTenia = letrasQueTenia.length();
+            operacion.setText(letrasQueTenia.substring(0, tamanioTextoQueTenia-tamanioTextoDeBoton));
+            System.out.println("********************BOTON BORRADO -- nuevoTamanio: " + (tamanioTextoQueTenia-tamanioTextoDeBoton));
+
         }
-        System.out.println("BOTON:+++++++++++++++++++++--------------------+++    "+botonesApretados.get(botonesApretados.size()-1).getText());
+        if(botonesApretados.size() > 0) {
+            System.out.println("BOTON:+++++++++++++++++++++--------------------+++    " + botonesApretados.get(botonesApretados.size() - 1).getText());
+        }
     }
 
     public static boolean verificarOperacion(int numeroUno,int numeroDos,String operacion,int resultadoUsuario){
         int resultado;
+        int residuo = 0;
         boolean correcto = false;
         if (operacion.equals("+")) {
             resultado = numeroUno+numeroDos;
@@ -169,10 +179,13 @@ public class game extends AppCompatActivity {
         }else if (operacion.equals("*")){
             resultado = numeroUno*numeroDos;
         }else{
+            residuo = numeroUno%numeroDos;
             resultado = numeroUno/numeroDos;
         }
         if(resultado==resultadoUsuario){
-            correcto = true;
+            if(residuo == 0){
+                correcto = true;
+            }
         }
         return correcto;
     }
@@ -215,11 +228,11 @@ public class game extends AppCompatActivity {
     }
     public  void animacionOperacion(TextView operacion,boolean correcto){
         if (correcto){
-        operacion.setBackground(getDrawable(R.drawable.operacion_correcta));
+            operacion.setBackground(getDrawable(R.drawable.operacion_correcta));
             if(MainActivity.sonidoOnOff) {
                 correct.start();
             }
-    }else{
+        }else{
             operacion.setBackground(getDrawable(R.drawable.operacion_incorrecta));
             if(MainActivity.sonidoOnOff) {
                 wrong.start();
@@ -302,8 +315,8 @@ public class game extends AppCompatActivity {
 
     public void habilitarBotones(List<Button> listaBotones){
         //4 botones
-       // int cantidadDeBotones = (int) (Math.floor(Math.random()*(8-1+1)+1))*4; //cantidad de botones q se van a habilitar,
-                                                                                // se multiplican * 4 porque se necesita al menos 4 botones para hacer una operacion
+        // int cantidadDeBotones = (int) (Math.floor(Math.random()*(8-1+1)+1))*4; //cantidad de botones q se van a habilitar,
+        // se multiplican * 4 porque se necesita al menos 4 botones para hacer una operacion
         int cantidadDeBotones = 12;
         int[] indiceDeBotonesActivos = new int[35];
         String[] textoBotones= textoDeCadaBoton(cantidadDeBotones,1,5,4);
@@ -334,7 +347,7 @@ public class game extends AppCompatActivity {
         return  resultado;
     }
     public static String[] textoDeCadaBoton(int cantDeBotones,int NmasPequeno, int nMasGrande, int tiposDeSignos){// tipos de signos representa: 1 solo sumas, 2 sumas y restas, 3 sumas,restas y producto,
-                                                                                                                    // 4 sumas, restas, producto y division
+        // 4 sumas, restas, producto y division
         String[] textoBotones = new String[cantDeBotones];
         int cantNumeros = cantDeBotones/2;
         int cantSignos = cantDeBotones/4;
